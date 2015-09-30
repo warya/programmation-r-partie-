@@ -11,7 +11,7 @@
 
 int main(void){
 	char msg[1000];
-	struct addrinfo hints, *serverInfo, *p ;
+	struct addrinfo hints, *serverInfo;
 	int sockfd, confd;
  
 	// initialisation de la structure addrinfo
@@ -31,7 +31,7 @@ int main(void){
 		exit(EXIT_FAILURE);
 	}
 
-	// Création de le socket
+	// Création du socket
 	if( (sockfd=socket(serverInfo->ai_family,serverInfo->ai_socktype,serverInfo->ai_protocol)) < 0){
 		perror("Erreur socket():");
 		exit(EXIT_FAILURE);
